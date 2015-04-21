@@ -4,6 +4,6 @@ This application creates a graph of nodes that can be used as an input to a Page
 The output will be as follows:
 
 pageId|rank <TAB> link1,link2,linkN...
-1|0.5		2,6,89,43
+1|0.5	2,6,89,43
 
 
