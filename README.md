@@ -3,4 +3,4 @@ This application creates a graph of nodes that can be used as an input to a Page
 
 The output will be as follows:
 
-pageId<tab>link1,link2,linkN
+pageId TAB link1,link2,linkN
