@@ -40,7 +40,7 @@ public class NodeList {
 	
 	public String printList(){
 		for(Node node : nodes){
-			sb.append(node.getPageId() + "," + "0.5" + "\t");
+			sb.append(node.getPageId() + "|" + "0.5" + "\t");
 			
 			for(int i = 0; i < node.getNumLinks(); i++){
 				sb.append(node.getOutlink(i) + ",");
