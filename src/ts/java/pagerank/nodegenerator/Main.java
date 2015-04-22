@@ -9,8 +9,8 @@ public class Main {
 	public static void main(String[] args) throws IOException {
 		
 		NodeList nodeList = new NodeList();
-		int numNodes = 100, lowerLimit = 2, upperLimit = 15;
-		File file = new File("data/nodes.txt");
+		int numNodes = 100, lowerLimit = 2, upperLimit = 10;
+		File file = new File("data/input.txt");
 		PrintWriter pw = new PrintWriter(file);
 		
 		nodeList.generateNodes(numNodes, lowerLimit, upperLimit);

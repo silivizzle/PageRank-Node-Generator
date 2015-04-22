@@ -25,7 +25,8 @@ public class NodeList {
 		
 		//Create the nodes
 		for(int i = 1; i <= numNodes; i++){
-			Node node = new Node(i, lowerLimit, upperLimit);
+			double rank = 1.0 / numNodes;
+			Node node = new Node(i, lowerLimit, upperLimit, rank);
 			
 			//Add outlinks to each node
 			Collections.shuffle(randomNode);
@@ -40,7 +41,7 @@ public class NodeList {
 	
 	public String printList(){
 		for(Node node : nodes){
-			sb.append(node.getPageId() + "|" + "0.5" + "\t");
+			sb.append(node.getPageId() + "\t" + Double.toString(node.getRank()) + "\t");
 			
 			for(int i = 0; i < node.getNumLinks(); i++){
 				sb.append(node.getOutlink(i) + ",");

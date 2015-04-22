@@ -5,6 +5,7 @@ import java.util.Random;
 public class Node {
 	
 	private int pageId, lowerLimit, upperLimit, numLinks;
+	private double rank;
 	private int[] outLinks = null;
 	private Random random = new Random();
 	
@@ -12,11 +13,12 @@ public class Node {
 		
 	}
 	
-	public Node(int pageId, int lowerLimit, int upperLimit){
+	public Node(int pageId, int lowerLimit, int upperLimit, double rank){
 		
 		this.pageId = pageId;
 		this.lowerLimit = lowerLimit;
 		this.upperLimit = upperLimit;
+		this.rank = rank;
 		numLinks = 1 + random.nextInt((upperLimit - lowerLimit));
 		outLinks = new int[numLinks];		
 	
@@ -76,6 +78,22 @@ public class Node {
 
 	public int getNumLinks() {
 		return numLinks;
+	}
+
+	public double getRank() {
+		return rank;
+	}
+
+	public void setRank(double rank) {
+		this.rank = rank;
+	}
+
+	public int[] getOutLinks() {
+		return outLinks;
+	}
+
+	public void setOutLinks(int[] outLinks) {
+		this.outLinks = outLinks;
 	}
 	
 	
